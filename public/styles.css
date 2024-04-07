@@ -36,10 +36,10 @@ p {
 .section {
   margin-top: 50px;
 }
-.endpoints-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+ul {
+}
+li {
+  margin: 10px 0;
 }
 .http-container p {
   font-size: 17px;
@@ -71,4 +71,23 @@ p {
 .http-container {
   display: flex;
   gap: 10px;
+}
+.hljs {
+  background: rgb(223, 223, 223) !important;
+  border-radius: 13px;
+}
+table,
+th,
+td {
+  border: 1px solid;
+  padding: 5px 3px;
+  border-collapse: collapse;
+}
+th {
+  height: 30px;
+  width: 100px;
+}
+.bold {
+  font-weight: 600;
+  font-size: 16px;
 }

@@ -9,6 +9,18 @@
       src="https://kit.fontawesome.com/97608a398a.js"
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
   </head>
   <body>
     <nav class="navbar">
@@ -31,32 +43,152 @@
       </div>
       <div class="section">
         <h2>Resources</h2>
-        <div class="endpoints-list">
-          <a href="/users">/users</a>
-          <a href="/comments">/comments</a>
-          <a href="/reviews">/reviews</a>
-          <a href="/posts">/posts</a>
-        </u>
-
+        <ul class="endpoints-list">
+          <li><a href="/api/users">/api/users</a></li>
+          <li><a href="/api/comments">/api/comments</a></li>
+          <li><a href="/api/reviews">/api/reviews</a></li>
+          <li><a href="/api/posts">/api/posts</a></li>
+        </ul>
       </div>
-      <p>All Https methods are accepted</p>
+      <p class="bold">All Https methods are accepted</p>
       <div class="http-container">
         <div class="http-style">
-            <p>GET</p>
+          <p>GET</p>
         </div>
         <div class="http-style green">
-            <p>POST</p>
+          <p>POST</p>
         </div>
         <div class="http-style orange">
-            <p>PUT</p>
+          <p>PUT</p>
         </div>
         <div class="http-style light-green">
-            <p>PATCH</p>
+          <p>PATCH</p>
         </div>
         <div class="http-style red">
-            <p>DELETE</p>
+          <p>DELETE</p>
         </div>
       </div>
+      <h2 class="bold">All Routes</h2>
+      <p class="bold">Filtering</p>
+      <code>Example: <a href="/api/users?id=1">/api/users?id=1</a> </code>
+      <div class="code-box">
+        <pre>
+         
+        <code class="language-json">
+        [
+          {
+            "id": 1,
+            "name": "John Doe",
+            "email": "JohnDoe@email.com",
+            "photoUrl": "https://cdn.pixabay.com/photo/2016/11/14/17/39/person-1824144_640.png"
+          }
+        ]
+        </code>
+       </pre>
+      </div>
+      <p class="bold">Limit</p>
+      <p>Example: <a href="/api/posts?_limit=1">/api/posts?_limit=1</a></p>
+      <div class="code-box">
+        <pre>
+         
+        <code class="language-json">
+        [
+          {
+            "id": 1,
+            "user_id": 1,
+            "title": "The Importance of Healthy Eating",
+            "content": "Eating healthy is crucial for maintaining a balanced lifestyle...",
+            "likes": 25,
+            "comments": 2
+          }
+        ]
+        </code>
+       </pre>
+      </div>
+      <p class="bold">Full text search</p>
+      <p>
+        Example: <a href="/api/comments?q=Enjoyed">/api/comments?q=Enjoyed</a>
+      </p>
+      <div class="code-box">
+        <pre>
+          
+          <code class="language-json">
+          [
+            {
+              "id": 1,
+              "user_id": 1,
+              "post_id": 1,
+              "comment": "Great post, John! Really enjoyed reading it."
+            }
+          ]
+          </code>
+        </pre>
+      </div>
+
+      <h2>Authentication</h2>
+      <div class="http-container">
+        <div class="http-style green">
+          <p>POST</p>
+        </div>
+      </div>
+      <p class="bold">Sample users</p>
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Username</th>
+          <th>Password</th>
+          <th>Role</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>admin</td>
+          <td>admin</td>
+          <td>admin</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>user</td>
+          <td>user</td>
+          <td>user</td>
+        </tr>
+      </table>
+      <p class="bold">Routes</p>
+
+      <ul>
+        <li><a href="/login">/login</a></li>
+        <li><a href="/register">/register</a></li>
+        <li><a href="/protected">/protected</a></li>
+      </ul>
+      <p class="bold">Sample login json</p>
+      <div class="code-box">
+        <pre>
+          
+          <code class="language-javascript">
+        {
+          "username": "user",
+          "password": "user",
+         
+        }
+          </code>
+        </pre>
+      </div>
+      <p class="bold">Successfull response</p>
+      <div class="code-box">
+        <pre>
+          
+          <code class="language-javascript">
+        {
+          "token": "jwt token will be here"     
+        }
+          </code>
+        </pre>
+      </div>
+      <p class="bold">NOTE!</p>
+      <p>Uses JWT session stored in cookies</p>
+      <p>Secret key to decode JWT:<quote class="bold"> MY_SECRET_KEY</quote></p>
     </div>
+    <footer>
+      <p>&copy; 2024 DoneWithWork</p>
+    </footer>
   </body>
 </html>

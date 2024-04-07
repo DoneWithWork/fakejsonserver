@@ -3,53 +3,104 @@
     {
       "id": 1,
       "name": "John Doe",
-      "email": "JohnDoe@email.com"
+      "email": "JohnDoe@email.com",
+      "photoUrl": "https://cdn.pixabay.com/photo/2016/11/14/17/39/person-1824144_640.png"
     },
     {
       "id": 2,
-      "name": "Jane Doe",
-      "email": ""
+      "name": "Jane Smith",
+      "email": "JaneSmith@example.com",
+      "photoUrl": "https://cdn.pixabay.com/photo/2021/02/12/07/03/icon-6007530_640.png"
     },
     {
       "id": 3,
-      "name": "Jane Doe",
-      "email": ""
+      "name": "David Johnson",
+      "email": "DavidJ@example.com",
+      "photoUrl": "https://cdn.pixabay.com/photo/2022/09/12/14/27/man-7449546_960_720.png"
+    },
+    {
+      "id": 4,
+      "name": "Emily Brown",
+      "email": "EmilyB@example.com",
+      "photoUrl": "https://example.com/emilybrown.jpg"
     }
   ],
   "comments": [
     {
       "id": 1,
       "user_id": 1,
-      "comment": "This is a comment"
+      "post_id": 1,
+      "comment": "Great post, John! Really enjoyed reading it."
     },
     {
       "id": 2,
       "user_id": 2,
-      "comment": "This is another comment"
+      "post_id": 1,
+      "comment": "I agree, John. Your insights are always valuable."
+    },
+    {
+      "id": 3,
+      "user_id": 3,
+      "post_id": 2,
+      "comment": "Jane, your post is inspiring. Keep up the good work!"
+    },
+    {
+      "id": 4,
+      "user_id": 4,
+      "post_id": 2,
+      "comment": "Thanks for sharing, Jane. Looking forward to more."
     }
   ],
   "reviews": [
     {
       "id": 1,
       "user_id": 1,
-      "review": "This is a review"
+      "product_id": 1,
+      "review": "I purchased this product and it exceeded my expectations. Highly recommended!"
     },
     {
       "id": 2,
       "user_id": 2,
-      "review": "This is another review"
+      "product_id": 2,
+      "review": "This service is amazing! It has saved me so much time. Thank you!"
+    },
+    {
+      "id": 3,
+      "user_id": 3,
+      "product_id": 1,
+      "review": "I had a great experience with this product. Will definitely buy again."
+    },
+    {
+      "id": 4,
+      "user_id": 4,
+      "product_id": 3,
+      "review": "Unfortunately, this product didn't meet my expectations. Disappointed."
     }
   ],
   "posts": [
     {
       "id": 1,
       "user_id": 1,
-      "post": "This is a post"
+      "title": "The Importance of Healthy Eating",
+      "content": "Eating healthy is crucial for maintaining a balanced lifestyle...",
+      "likes": 25,
+      "comments": 2
     },
     {
       "id": 2,
       "user_id": 2,
-      "post": "This is another post"
+      "title": "Tips for Effective Time Management",
+      "content": "Managing your time effectively can significantly improve productivity...",
+      "likes": 40,
+      "comments": 2
+    },
+    {
+      "id": 3,
+      "user_id": 3,
+      "title": "Exploring New Hiking Trails",
+      "content": "Hiking is not only a great form of exercise but also an opportunity to connect with nature...",
+      "likes": 15,
+      "comments": 0
     }
   ]
 }
