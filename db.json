@@ -1,0 +1,55 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "JohnDoe@email.com"
+    },
+    {
+      "id": 2,
+      "name": "Jane Doe",
+      "email": ""
+    },
+    {
+      "id": 3,
+      "name": "Jane Doe",
+      "email": ""
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "comment": "This is a comment"
+    },
+    {
+      "id": 2,
+      "user_id": 2,
+      "comment": "This is another comment"
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "review": "This is a review"
+    },
+    {
+      "id": 2,
+      "user_id": 2,
+      "review": "This is another review"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "post": "This is a post"
+    },
+    {
+      "id": 2,
+      "user_id": 2,
+      "post": "This is another post"
+    }
+  ]
+}
