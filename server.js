@@ -1,12 +1,28 @@
-// server.js
 const jsonServer = require("json-server");
 const server = jsonServer.create();
 const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
 const jwt = require("jsonwebtoken");
 const CookieParser = require("cookie-parser");
+
 server.use(middlewares);
+server.use(jsonServer.bodyParser);
 server.use(CookieParser());
+
+server.post("/api/*", (req, res, next) => {
+  res.json({ data: req.body });
+});
+server.put("/api/*", (req, res, next) => {
+  res.json({ data: req.body });
+});
+server.patch("/api/*", (req, res, next) => {
+  res.json({ data: req.body });
+});
+server.delete("/api/*", (req, res, next) => {
+  res.json({ success: "Record deleted" });
+});
+server.use("/api", router);
+
 const testUsers = [
   {
     id: 1,
@@ -21,8 +37,6 @@ const testUsers = [
     role: "user",
   },
 ];
-server.use("/api", router);
-server.use(jsonServer.bodyParser);
 
 //custom auth routes
 server.post("/login", (req, res) => {
